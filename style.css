@@ -1,53 +1,160 @@
-body{
-    background: #F0E8DF;
+/* Jerarqauia CSS: Inlin-html>ID>class>etiqueta, y (class+etiqueta > etiqueta)   */
+
+header{
+    background-color: #bbbbbb;
+    padding: 20px 0;
 }
 
-.tituloPrincipal{
-    padding-left: 30px;
+.caja{
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
 }
 
-#banner{
-    width: 100%;
+nav{
+    position: absolute;
+    top: 110px;;
+    right: 0;
 }
 
-.tituloCentrado{
+nav li{
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav a{
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+nav a:hover{ /*Propiedad que captura el movimiento del raton */
+    color: #c78c19;
+    text-decoration: underline;
+}
+
+.productos{
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.productos li{
+    display: inline-block;
     text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    
+    border: 3px solid #000000;
+    /*border-width: 2px;
+    border-style: solid;
+    border-color: #000000;
+     */
+     border-radius: 10px;
+
 }
-p{
-    text-align: center;
+
+.productos li:hover{ /* hover permite hacer cambios visuales al posicionar el raton sobre el elemento */
+    border-color: #c78c19;
+}
+
+.productos li:active{ /* active permite realizar camabios al presionar click */
+    border-color: #088c19;
+}
+
+.productos h2{
+    font-size: 30px;
+    font-weight: bold;
     
 }
 
-em strong{
-    color: red;
+.productos li:hover h2{ /* le da la jerarquia suficiente para modificar un elemento del h2 */
+    font-size: 33px;
 }
 
-#mision{
+.producto-descripcion{
+    font-size: 18px;
+}
+
+.producto-precio{
     font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
-.principal{
-    background: #cccccc;
-    padding: 20px;
+footer{
+    text-align: center;
+    background: url(imagenes/bg.jpg);
+    padding: 40px;
 }
 
-.diferenciales{
-    background: #ffffff;
-    padding: 30px;
+.copyright{
+    color: #ffffff;
+    font-size: 13px;
+    margin: 20px;
 }
 
-
-.items{
-    font-style: italic;
+main{
+    width: 940px;
+    margin: 0 auto;
 }
 
-ul{
-    display: inline-block;
-    vertical-align: top;
-    width: 20%;
-    margin-right: 15%;
+form {
+    margin: 40px 0;
 }
 
-.imagenDiferenciales{
+form label, form legend{
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.input-padron{
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
     width: 50%;
 }
+
+.checkbox{
+    margin: 20px 0;
+}
+
+.enviar{
+    width: 40%;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: orange;
+    border: none;
+    border-radius: 5px;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+.enviar:hover{
+    background: darkorange;
+    transform: scale(1.2); /*Transforma la escala de todos los objetos del elementos a la vez */
+}
+
+table{
+    margin: 40px 40px;
+}
+
+thead{
+    background: #555555; 
+    color: white;
+    font-weight: bold;
+}
+
+td, th{
+    border: 1px solid black;
+    padding: 8px 15px;
+}
+
