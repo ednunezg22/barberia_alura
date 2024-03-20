@@ -1,53 +1,290 @@
+/* Jerarqauia CSS: Inlin-html>ID>class>etiqueta, y (class+etiqueta > etiqueta)   */
+
 body{
-    background: #F0E8DF;
+    font-family: "Asul", serif;
 }
 
-.tituloPrincipal{
-    padding-left: 30px;
+header{
+    background-color: #bbbbbb;
+    padding: 20px 0;
 }
 
-#banner{
-    width: 100%;
+.caja{
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
 }
 
-.tituloCentrado{
+nav{
+    position: absolute;
+    top: 110px;;
+    right: 0;
+}
+
+nav li{
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav a{
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+nav a:hover{ /*Propiedad que captura el movimiento del raton */
+    color: #c78c19;
+    text-decoration: underline;
+}
+
+.productos{
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.productos li{
+    display: inline-block;
     text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    
+    border: 3px solid #000000;
+    /*border-width: 2px;
+    border-style: solid;
+    border-color: #000000;
+     */
+     border-radius: 10px;
+
 }
-p{
-    text-align: center;
+
+.productos li:hover{ /* hover permite hacer cambios visuales al posicionar el raton sobre el elemento */
+    border-color: #c78c19;
+}
+
+.productos li:active{ /* active permite realizar camabios al presionar click */
+    border-color: #088c19;
+}
+
+.productos h2{
+    font-size: 30px;
+    font-weight: bold;
     
 }
 
-em strong{
-    color: red;
+.productos li:hover h2{ /* le da la jerarquia suficiente para modificar un elemento del h2 */
+    font-size: 33px;
 }
 
-#mision{
+.producto-descripcion{
+    font-size: 18px;
+}
+
+.producto-precio{
     font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer{
+    text-align: center;
+    background: url(imagenes/bg.jpg);
+    padding: 40px;
+}
+
+.copyright{
+    color: #ffffff;
+    font-size: 13px;
+    margin: 20px;
+}
+
+
+
+form {
+    margin: 40px 0;
+}
+
+form label, form legend{
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.input-padron{
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+.checkbox{
+    margin: 20px 0;
+}
+
+.enviar{
+    width: 40%;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: orange;
+    border: none;
+    border-radius: 5px;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+.enviar:hover{
+    background: darkorange;
+    transform: scale(1.2); /*Transforma la escala de todos los objetos del elementos a la vez */
+}
+
+table{
+    margin: 40px 40px;
+}
+
+thead{
+    background: #555555; 
+    color: white;
+    font-weight: bold;
+}
+
+td, th{
+    border: 1px solid black;
+    padding: 8px 15px;
+}
+
+/* CSS para nuestra HOME */
+
+.banner{
+    width: 100%;
 }
 
 .principal{
-    background: #cccccc;
-    padding: 20px;
+    padding: 3em 0;
+    background: #fefefe;
+    width: 940px;
+    margin: 0 auto;
 }
 
-.diferenciales{
-    background: #ffffff;
-    padding: 30px;
+.titulo-principal{
+    text-align: center;
+    font-size: 2em;  /* 2em significa 2 veces el tamaño dela fuente padrom  */
+    margin: 0 0 1em;
+    clear: left;
 }
 
+/* .titulo-principal::first-letter{
+    font-weight: bold;
+} */
 
-.items{
+
+/* Selectores avanzados:
+
+main > p{ } aplica a todos los hijos p de main 
+img + p{} aplica al p despues de img
+img ~ p{} aplica a todos los parrafos despues de img
+.principal p:not(#mision) aplica a todos los parrafos menos al del id "mision"
+
+*/
+
+.principal p{
+    margin: 0 0 1em;
+}
+
+.principal strong{
+    font-weight: bold;
+}
+
+.principal em{
     font-style: italic;
 }
 
-ul{
-    display: inline-block;
-    vertical-align: top;
-    width: 20%;
-    margin-right: 15%;
+.utensilios{
+    width: 120px;
+    float: left;
+    margin: 0 20px 20px 0;
 }
 
-.imagenDiferenciales{
-    width: 50%;
+.mapa{
+    padding: 3em 0;
+    background: linear-gradient(#fefefe, #888888);
+}
+
+.mapa p{
+    margin: 0 0 2em;
+    text-align: center;
+}
+
+.mapa-contenido{
+    width: 940px;
+    margin: 0 auto;
+}
+
+.diferenciales{
+    padding: 3em 0;
+    background: #888888;
+}
+
+.contenido-diferenciales{
+    width: 640px;
+    margin: 0 auto;
+}
+
+.lista-diferenciales{
+    width: 40%;
+    display: inline-block; /*Garantizar que no haya espacio entre la lista y la imagen para que salgan uno al lado del otro en la página  */
+    vertical-align: top;
+}
+
+.items{ 
+    line-height: 1.5; /* aumenta el tamaño entre lineas el 50% de veces */
+}
+
+.items::before{
+    content: "★";
+}
+
+.items:first-child{ /* Modifica solo el primer elemento de la lista o grupo (pseudo clase)*/
+    font-weight: bold;
+}
+
+.imagen-diferenciales{
+    width: 60%;
+    transition: 400ms;
+    box-shadow: 10px 10px 30px 15px #000000; /* tercer parámetro es el difuminado en pixeles,
+     el cuarto parámetro es expansión, si se colocá una coma al final (,) se adiciona una sombra adicional    */
+}
+
+.imagen-diferenciales:hover{
+    opacity: 0.3;
+}
+
+.video{
+    width: 560px;
+    margin: 1em auto;
+}
+
+@media screen and (max-width:480px){  /*Que si encuentras una pantalla de hasta 480 px aplicar el contenido  */
+    
+    h1{
+        text-align: center;
+    }
+
+    nav{
+        position: static;
+    }
+
+    .caja, .principal, .mapa-contenido, .contenido-diferenciales, .video{
+        width: auto;
+   }
+
+   .lista-diferenciales, .imagen-diferenciales{
+        width: 100%;
+   }
 }
